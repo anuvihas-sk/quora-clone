@@ -1,0 +1,11 @@
+class Question {
+    constructor(id, title, body) {
+      this.id = id;
+      this.title = title;
+      this.body = body;
+      this.answers = [];
+    }
+  }
+  
+  module.exports = Question;
+  
