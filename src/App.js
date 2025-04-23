@@ -11,7 +11,7 @@ const App = () => {
       <div className="app">
         <header className="navbar">
           <div className="navbar-container">
-            <h1 className="logo">QuoraLite</h1>
+            <h1 className="logo">EduLearn</h1>
             <nav className="nav">
               <Link to="/">Home</Link>
               <Link to="/ask">Ask Question</Link>
@@ -28,7 +28,7 @@ const App = () => {
         </main>
 
         <footer className="footer">
-          <p>&copy; {new Date().getFullYear()} QuoraLite. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} EduLearn. All rights reserved.</p>
         </footer>
       </div>
     </Router>

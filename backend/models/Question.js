@@ -1,11 +1,22 @@
 class Question {
-    constructor(id, title, body) {
-      this.id = id;
-      this.title = title;
-      this.body = body;
-      this.answers = [];
-    }
+  constructor(id, title, body) {
+    this.id = id;
+    this.title = title;
+    this.body = body;
+    this.likes = 0;
+    this.comments = [];
+    this.answers = [];
   }
-  
-  module.exports = Question;
+}
+
+class Answer {
+  constructor(id, body) {
+    this.id = id;
+    this.body = body;
+    this.likes = 0;
+    this.comments = [];
+  }
+}
+
+module.exports = { Question, Answer };
   

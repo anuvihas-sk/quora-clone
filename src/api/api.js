@@ -37,3 +37,41 @@ export const postAnswer = (id, answer) => {
       throw error;
     });
 };
+
+// New API calls for likes and comments
+
+export const likeQuestion = (id) => {
+  return axios.post(`${API_URL}/${id}/like`)
+    .then(response => response.data)
+    .catch(error => {
+      console.error(`Error liking question with id ${id}:`, error);
+      throw error;
+    });
+};
+
+export const commentQuestion = (id, comment) => {
+  return axios.post(`${API_URL}/${id}/comments`, { comment })
+    .then(response => response.data)
+    .catch(error => {
+      console.error(`Error commenting on question with id ${id}:`, error);
+      throw error;
+    });
+};
+
+export const likeAnswer = (questionId, answerId) => {
+  return axios.post(`${API_URL}/${questionId}/answers/${answerId}/like`)
+    .then(response => response.data)
+    .catch(error => {
+      console.error(`Error liking answer with id ${answerId} for question ${questionId}:`, error);
+      throw error;
+    });
+};
+
+export const commentAnswer = (questionId, answerId, comment) => {
+  return axios.post(`${API_URL}/${questionId}/answers/${answerId}/comments`, { comment })
+    .then(response => response.data)
+    .catch(error => {
+      console.error(`Error commenting on answer with id ${answerId} for question ${questionId}:`, error);
+      throw error;
+    });
+};
